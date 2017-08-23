@@ -25,6 +25,7 @@ class Ping < YossarianPlugin
   match /ping$/, method: :ping
 
   def ping(m)
-    m.reply "pong #{Time.now.to_i}", true
+    # I've got them and their little dubs too!
+    m.reply "pong #{Time.now.to_i.remove_dubs}", true
   end
 end
